@@ -1,0 +1,6 @@
+#Ignore environment files
+.env
+
+#Ignore data modules
+data/raw/*
+data/processed/*
