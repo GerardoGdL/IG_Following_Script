@@ -4,3 +4,10 @@
 #Ignore data modules
 data/raw/*
 data/processed/*
+
+# Keep directory structure in Git
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+#Ignore cache data created when you run the program
+__pycache__/
