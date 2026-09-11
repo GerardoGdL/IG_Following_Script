@@ -6,9 +6,9 @@ def parse_followers(file_path):
     with open(file_path, "r") as file:
         data = json.load(file)
 
-    names_list = []
+    names_list = set()
     for each in data:
-        names_list.append(each["string_list_data"][0]["value"])
+        names_list.add(each["string_list_data"][0]["value"])
 
     return names_list
 
@@ -18,8 +18,8 @@ def parse_following(file_path):
     with open(file_path, "r") as file:
         data = json.load(file)
 
-    names_list = []
+    names_list = set()
     for each in data["relationships_following"]:
-        names_list.append(each["title"])
+        names_list.add(each["title"])
 
     return names_list
